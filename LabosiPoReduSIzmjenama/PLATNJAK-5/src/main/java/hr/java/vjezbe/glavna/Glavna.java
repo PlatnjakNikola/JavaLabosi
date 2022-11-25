@@ -3,6 +3,7 @@ package hr.java.vjezbe.glavna;
 import hr.java.vjezbe.entitet.*;
 import hr.java.vjezbe.iznimke.NemoguceOdreditiProsjekStudentaException;
 import hr.java.vjezbe.iznimke.PostojiViseNajmladjihStudenataException;
+import hr.java.vjezbe.soritranje.ObrazovneUstanoveSorter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,6 +30,7 @@ public class Glavna {
         System.out.print("Unesite koliko zelite ustanova: ");
         int brojUstanova = unosIntegera();
         Sveuciliste<ObrazovnaUstanova> sveuciliste = new Sveuciliste<>(brojUstanova);
+
         logger.info("Unos ustanova. ");
         for(int i = 0; i < brojUstanova; ++i){
             System.out.println("Unesite podatke za " + (i+1) + ". ustanovu:");
@@ -58,7 +60,7 @@ public class Glavna {
                 break;
             }
             sveuciliste.dodajObrazovnuUstanovu(obrazovnaUstanova);
-
+            ispisObrazovnihUstanova(sveuciliste);
         }
 
     }
@@ -530,4 +532,13 @@ public class Glavna {
         System.out.println("_____________________KRAJ_____________________");
 
     }
+    public static void ispisObrazovnihUstanova(Sveuciliste<ObrazovnaUstanova> sveuciliste){
+        sveuciliste.getListaUstanova()
+                .stream()
+                .sorted(new ObrazovneUstanoveSorter())
+                .forEach(obrazovnaUstanova1 -> System.out.println(obrazovnaUstanova1.getNaziv() +
+                                                " Broj studenata: "+ obrazovnaUstanova1.getStudents().size()));
+
+    }
+
 }
