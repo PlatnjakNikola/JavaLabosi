@@ -17,7 +17,7 @@ public class Sveuciliste <T extends ObrazovnaUstanova>{
     }
     public Sveuciliste(int kapacitet){
         int initKapacitet = kapacitet > 0 ? kapacitet : 10;
-        listaUstanova = new ArrayList<T>(initKapacitet);
+        listaUstanova = new ArrayList<>(initKapacitet);
     }
 
     /**

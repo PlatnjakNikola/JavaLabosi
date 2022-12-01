@@ -1,6 +1,7 @@
 package hr.java.vjezbe.entitet;
 
 import hr.java.vjezbe.glavna.Glavna;
+import hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException;
 import hr.java.vjezbe.iznimke.NemoguceOdreditiProsjekStudentaException;
 import hr.java.vjezbe.iznimke.PostojiViseNajmladjihStudenataException;
 
@@ -9,6 +10,7 @@ import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.slf4j.LoggerFactory;
@@ -22,7 +24,7 @@ public class FakultetRacunarstva extends ObrazovnaUstanova implements Diplomski{
      * @param students contains students at Fakultetracunarstva
      * @param ispits contains exams at Fakultetracunarstva
      */
-    public FakultetRacunarstva(long id, String naziv, List<Predmet> predmets, List<Profesor> profesors, List<Student> students, List<Ispit> ispits) {
+    public FakultetRacunarstva(long id, String naziv, List<Predmet> predmets, Set<Profesor> profesors, Set<Student> students, List<Ispit> ispits) {
         super(id, naziv, predmets, profesors, students, ispits);
     }
 
@@ -95,9 +97,8 @@ public class FakultetRacunarstva extends ObrazovnaUstanova implements Diplomski{
                         najmladjiStudenti.add(student);
                     }
                 }
-            }catch(NemoguceOdreditiProsjekStudentaException ex){
+            }catch(NemoguceOdreditiProsjekStudentaException | NemaIspitaZaStudentaException ex){
                 LoggerFactory.getLogger(Glavna.class).info(ex.getMessage(), ex);
-                System.out.println(ex.getMessage());
             }
 
         }

@@ -7,8 +7,8 @@ import java.util.List;
 /**
  * class of exams for creating objects that user can store data in it
  */
-public final class Ispit extends Entitet implements Online{
-    private final List<String> onlineSoftveri = Arrays.asList("Synap", "Test Invite", "TestGorilla", "ExamOnline", "TCExam","eSkill");
+public final class Ispit extends Entitet {
+
     private Predmet predmetKojiSePolaze;
     private Student studentKojiPolazeIspit;
     private Ocjena ocjena;
@@ -84,16 +84,4 @@ public final class Ispit extends Entitet implements Online{
         this.datumIVrijeme = datumIVrijeme;
     }
 
-    /**
-     * method for giving number of students that can participate on online exam
-     * @param softver contains name of software
-     * @return number of students
-     */
-    @Override
-    public int brojStudenataNaOnlineIspitu(String softver) {
-        if(onlineSoftveri.contains(softver)){
-            return 100;
-        }
-        return 20;
-    }
 }

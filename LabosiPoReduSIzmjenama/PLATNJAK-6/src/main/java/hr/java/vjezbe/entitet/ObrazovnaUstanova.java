@@ -1,12 +1,13 @@
 package hr.java.vjezbe.entitet;
 
 import java.util.List;
+import java.util.Set;
 
 public abstract class ObrazovnaUstanova extends Entitet{
     private String naziv;
     private List<Predmet> predmets;
-    private List<Profesor> profesors;
-    private List<Student> students;
+    private Set<Profesor> profesors;
+    private Set<Student> students;
     private List<Ispit> ispits;
 
     /**
@@ -17,7 +18,7 @@ public abstract class ObrazovnaUstanova extends Entitet{
      * @param students is array of students
      * @param ispits is array of exams
      */
-    public ObrazovnaUstanova(long id, String naziv, List<Predmet> predmets, List<Profesor> profesors, List<Student> students, List<Ispit> ispits) {
+    public ObrazovnaUstanova(long id, String naziv, List<Predmet> predmets, Set<Profesor> profesors, Set<Student> students, List<Ispit> ispits) {
         super(id);
         this.naziv = naziv;
         this.predmets = predmets;
@@ -42,19 +43,19 @@ public abstract class ObrazovnaUstanova extends Entitet{
         this.predmets = predmets;
     }
 
-    public List<Profesor> getProfesors() {
+    public Set<Profesor> getProfesors() {
         return profesors;
     }
 
-    public void setProfesors(List<Profesor> profesors) {
+    public void setProfesors(Set<Profesor> profesors) {
         this.profesors = profesors;
     }
 
-    public List<Student> getStudents() {
+    public Set<Student> getStudents() {
         return students;
     }
 
-    public void setStudents(List<Student> students) {
+    public void setStudents(Set<Student> students) {
         this.students = students;
     }
 

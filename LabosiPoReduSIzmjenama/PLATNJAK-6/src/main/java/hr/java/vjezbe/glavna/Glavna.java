@@ -1,6 +1,7 @@
 package hr.java.vjezbe.glavna;
 
 import hr.java.vjezbe.entitet.*;
+import hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException;
 import hr.java.vjezbe.iznimke.NemoguceOdreditiProsjekStudentaException;
 import hr.java.vjezbe.iznimke.PostojiViseNajmladjihStudenataException;
 import hr.java.vjezbe.soritranje.ObrazovneUstanoveSorter;
@@ -36,20 +37,20 @@ public class Glavna {
             System.out.println("Unesite podatke za " + (i+1) + ". ustanovu:");
 
             logger.info("Unos profesora. ");
-            List<Profesor> professors = unosProfesora();
+            Set<Profesor> professors = unosProfesora();
 
             logger.info("Unos predmeta. ");
-            Map<Profesor, List<Predmet>> mapaProfesoraIpredmeta = unosPredmeta(professors);
+            Map<Profesor, List<Predmet>> mapaProfesoraIpredmeta = unosPredmeta(List.copyOf(professors));
             List<Predmet> sviPredmeti = new ArrayList<>();
             mapaProfesoraIpredmeta.forEach((k,v)-> sviPredmeti.addAll(v));
             ispisMapeProfesorStudent(mapaProfesoraIpredmeta);
 
 
             logger.info("Unos studenata. ");
-            List<Student> students = unosStudenta();
+            Set<Student> students = unosStudenta();
 
             logger.info("Unos ispita. ");
-            List<Ispit> ispits = unosIspita(sviPredmeti, students);
+            List<Ispit> ispits = unosIspita(sviPredmeti, List.copyOf(students));
             ispisPredmetaIStudenata(ispits, sviPredmeti);
 
             ispisStudenataKojiSuDobiliOdlican(ispits);
@@ -69,8 +70,8 @@ public class Glavna {
      * function for entering data about teachers
      * @return array of teachers
      */
-    public static List<Profesor> unosProfesora(){
-        List<Profesor> profesors = new ArrayList<>(BROJPROFESORA);
+    public static Set<Profesor> unosProfesora(){
+        Set<Profesor> profesors = new HashSet<>(BROJPROFESORA);
         for(int i = 0; i < BROJPROFESORA; ++i){
             System.out.println("Unesite "+ (i + 1) + ". profesora: ");
             System.out.print("Unesite sifru profesora: ");
@@ -159,9 +160,9 @@ public class Glavna {
      * function for entering data about students
      * @return array of students
      */
-    public static List<Student> unosStudenta(){
+    public static Set<Student> unosStudenta(){
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy.");
-        List<Student> students = new ArrayList<>(BROJSTUDENATA);
+        Set<Student> students = new HashSet<>(BROJSTUDENATA);
         for(int i = 0; i < BROJSTUDENATA; ++i){
             System.out.println("Unesite "+ (i + 1) + ". studenta: ");
             System.out.print("Unesite ime studenta: ");
@@ -285,8 +286,8 @@ public class Glavna {
      * @param ispits is array of exams that was taken on institution
      * @return object of institution for saving institution
      */
-    public static ObrazovnaUstanova unosObrazovnaUstanova (long id, String odabirUcilista, List<Profesor> profesors,
-                                     List<Predmet> predmets, List<Student> students, List<Ispit> ispits){
+    public static ObrazovnaUstanova unosObrazovnaUstanova (long id, String odabirUcilista, Set<Profesor> profesors,
+                                     List<Predmet> predmets, Set<Student> students, List<Ispit> ispits){
 
         System.out.print("Unesite naziv obrazovne ustanove: ");
         String nazivUstanove = unos.nextLine();
@@ -322,6 +323,10 @@ public class Glavna {
                     System.out.println(ex.getMessage());
                     System.out.println("Zbog toga ima prosjek nedovoljan(1)");
                 }
+                catch (NemaIspitaZaStudentaException ex){
+                    logger.info(ex.getMessage(), ex);
+                    System.out.println();
+                }
             }
             else{
                 try{
@@ -343,6 +348,9 @@ public class Glavna {
                     logger.info(ex.getMessage(), ex);
                     System.out.println(ex.getMessage());
                     System.out.println("Zbog toga ima prosjek nedovoljan(1)");
+                }catch (NemaIspitaZaStudentaException ex){
+                    logger.info(ex.getMessage(), ex);
+                    System.out.println();
                 }
             }
         }

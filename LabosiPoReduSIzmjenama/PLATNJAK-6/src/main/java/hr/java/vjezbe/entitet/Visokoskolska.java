@@ -1,5 +1,6 @@
 package hr.java.vjezbe.entitet;
 
+import hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException;
 import hr.java.vjezbe.iznimke.NemoguceOdreditiProsjekStudentaException;
 
 import java.math.BigDecimal;
@@ -23,8 +24,11 @@ public interface Visokoskolska {
      * @param ispits array of exams
      * @return average grade
      */
-    default BigDecimal odrediProsjekOcjenaNaIspitima(List<Ispit> ispits) throws NemoguceOdreditiProsjekStudentaException{
+    default BigDecimal odrediProsjekOcjenaNaIspitima(List<Ispit> ispits) throws NemoguceOdreditiProsjekStudentaException, NemaIspitaZaStudentaException {
         int suma = 0;
+        if (ispits.size() == 0){
+            throw new NemaIspitaZaStudentaException("Student nije pisao niti jedan ispit");
+        }
         for(Ispit ispit: ispits){
             if (ispit.getOcjena() == Ocjena.NEDOVOLJAN) {
                 throw new NemoguceOdreditiProsjekStudentaException("Student " + ispit.getStudentKojiPolazeIspit().ImeIPrezimeStudenta() +
@@ -52,29 +56,11 @@ public interface Visokoskolska {
      * @return array of filtered exams
      */
     default List<Ispit> filtrirajIspitePoStudentu(List<Ispit> ispits, Student student){
-        long vrijemepocetka = System.currentTimeMillis();
-        List<Ispit> lista = ispits.stream()
-                .filter(ispit -> ispit.getStudentKojiPolazeIspit().getJmbag().equals(student.getJmbag()))
+        return ispits.stream()
+                .filter(ispit -> ispit.getStudentKojiPolazeIspit().getJmbag().equals(student.getJmbag())
+                                && !ispit.getPredmetKojiSePolaze().getSifra().matches("ZV(.*)")
+                                && !ispit.getPredmetKojiSePolaze().getSifra().matches("OB(.*)"))
                 .collect(Collectors.toList());
-        long vrijemeZavrsetka = System.currentTimeMillis();
-
-        System.out.println();
-        System.out.println("_____________________Usporedba LAMBDA - FOR PETLJA_____________________");
-        System.out.println("Vrijeme izvrsavanja lambdi je: " + Math.subtractExact(vrijemeZavrsetka, vrijemepocetka));
-
-        vrijemepocetka = System.currentTimeMillis();
-        List<Ispit> testnaLista = new ArrayList<>();
-        for(Ispit ispit: ispits){
-            if( ispit.getStudentKojiPolazeIspit().getJmbag().equals(student.getJmbag() ) )
-                testnaLista.add(ispit);
-        }
-        vrijemeZavrsetka = System.currentTimeMillis();
-
-        System.out.println("Vrijeme izvrsavanja for petlje je: " + Math.subtractExact(vrijemeZavrsetka, vrijemepocetka));
-        System.out.println("_____________________Kraj_____________________");
-        System.out.println();
-
-        return lista;
     }
 
 }

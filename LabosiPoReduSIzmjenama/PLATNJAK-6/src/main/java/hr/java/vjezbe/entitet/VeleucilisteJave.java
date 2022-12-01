@@ -1,6 +1,7 @@
 package hr.java.vjezbe.entitet;
 
 import hr.java.vjezbe.glavna.Glavna;
+import hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException;
 import hr.java.vjezbe.iznimke.NemoguceOdreditiProsjekStudentaException;
 import org.slf4j.LoggerFactory;
 
@@ -18,7 +19,7 @@ public class VeleucilisteJave extends ObrazovnaUstanova implements Visokoskolska
      * @param students is array of students of institution Veleuciliste Jave
      * @param ispits is array of exams of institution Veleuciliste Jave
      */
-    public VeleucilisteJave(long id, String naziv, List<Predmet> predmets, List<Profesor> profesors, List<Student> students, List<Ispit> ispits) {
+    public VeleucilisteJave(long id, String naziv, List<Predmet> predmets, Set<Profesor> profesors, Set<Student> students, List<Ispit> ispits) {
         super(id, naziv, predmets, profesors, students, ispits);
     }
 
@@ -48,7 +49,11 @@ public class VeleucilisteJave extends ObrazovnaUstanova implements Visokoskolska
             }catch(NemoguceOdreditiProsjekStudentaException ex){
                 LoggerFactory.getLogger(Glavna.class).info("Metoda OdradiNajuspjesnijegStudenta u klasi " +
                         "Veleucilistejave naisao na studenta s ocjenom 1.", ex);
-            }catch (ArithmeticException ex){
+            }catch (NemaIspitaZaStudentaException ex){
+                LoggerFactory.getLogger(Glavna.class).info("Metoda OdradiNajuspjesnijegStudenta u klasi " +
+                        "Veleucilistejave naisao na studenta koji nema ispita", ex);
+            }
+            catch (ArithmeticException ex){
                 LoggerFactory.getLogger(Glavna.class).info("Ne postoje ispiti za studenta "+ student.ImeIPrezimeStudenta() + " u " +
                         godina + ".", ex);
             }
