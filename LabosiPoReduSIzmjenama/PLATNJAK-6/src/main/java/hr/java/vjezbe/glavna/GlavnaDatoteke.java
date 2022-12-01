@@ -375,6 +375,7 @@ public class GlavnaDatoteke {
 
                 Ocjena obranaZavrsnogRada = dodajOcjenuObraneRadaIspita(student, obrazovnaUstanova.getIspits());
 
+
                 if(ocjenaZavrsnogRada != null && obranaZavrsnogRada != null){
 
                     BigDecimal konacnaOcjena = obrazovnaUstanova.izracunajKonacnuOcjenuStudijaZaStudenta(prosjecnaOcjena, ocjenaZavrsnogRada, obranaZavrsnogRada);
@@ -403,7 +404,7 @@ public class GlavnaDatoteke {
 
     public static Ocjena dodajOcjenuZavrsnogRadaIspita(Student student, List<Ispit>ispits){
         for(Ispit ispit: ispits){
-            if(ispit.getPredmetKojiSePolaze().getSifra().matches("^ZV") &&
+            if(ispit.getPredmetKojiSePolaze().getSifra().matches("ZV(.*)") &&
                 ispit.getStudentKojiPolazeIspit().getId() == student.getId()){
                 return ispit.getOcjena();
             }
@@ -412,7 +413,7 @@ public class GlavnaDatoteke {
     }
     public static Ocjena dodajOcjenuObraneRadaIspita(Student student, List<Ispit>ispits){
         for(Ispit ispit: ispits){
-            if(ispit.getPredmetKojiSePolaze().getSifra().matches("^OB") &&
+            if(ispit.getPredmetKojiSePolaze().getSifra().matches("OB(.*)") &&
                     ispit.getStudentKojiPolazeIspit().getId() == student.getId()){
                 return ispit.getOcjena();
             }

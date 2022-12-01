@@ -880,3 +880,159 @@ hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException: Student nije pisao niti je
 	at hr.java.vjezbe.glavna.GlavnaDatoteke.podaciZaFakultetRacunalstva(GlavnaDatoteke.java:356)
 	at hr.java.vjezbe.glavna.GlavnaDatoteke.ispisPodatakaIzSveucilista(GlavnaDatoteke.java:316)
 	at hr.java.vjezbe.glavna.GlavnaDatoteke.main(GlavnaDatoteke.java:46)
+2022-12-01 13:33:11,356 INFO [main] h.j.v.g.Glavna [GlavnaDatoteke.java:392] Student nije pisao niti jedan ispit
+hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException: Student nije pisao niti jedan ispit
+	at hr.java.vjezbe.entitet.Visokoskolska.odrediProsjekOcjenaNaIspitima(Visokoskolska.java:30)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.podaciZaVeleucilisteJave(GlavnaDatoteke.java:371)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.ispisPodatakaIzSveucilista(GlavnaDatoteke.java:313)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.main(GlavnaDatoteke.java:46)
+2022-12-01 13:33:11,362 INFO [main] h.j.v.g.Glavna [VeleucilisteJave.java:53] Metoda OdradiNajuspjesnijegStudenta u klasi Veleucilistejave naisao na studenta koji nema ispita
+hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException: Student nije pisao niti jedan ispit
+	at hr.java.vjezbe.entitet.Visokoskolska.odrediProsjekOcjenaNaIspitima(Visokoskolska.java:30)
+	at hr.java.vjezbe.entitet.VeleucilisteJave.odrediNajuspjesnijegStudentaNaGodini(VeleucilisteJave.java:44)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.podaciZaVeleucilisteJave(GlavnaDatoteke.java:396)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.ispisPodatakaIzSveucilista(GlavnaDatoteke.java:313)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.main(GlavnaDatoteke.java:46)
+2022-12-01 13:33:11,363 INFO [main] h.j.v.g.Glavna [GlavnaDatoteke.java:344] Student nije pisao niti jedan ispit
+hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException: Student nije pisao niti jedan ispit
+	at hr.java.vjezbe.entitet.Visokoskolska.odrediProsjekOcjenaNaIspitima(Visokoskolska.java:30)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.podaciZaFakultetRacunalstva(GlavnaDatoteke.java:325)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.ispisPodatakaIzSveucilista(GlavnaDatoteke.java:316)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.main(GlavnaDatoteke.java:46)
+2022-12-01 13:33:11,365 INFO [main] h.j.v.g.Glavna [FakultetRacunarstva.java:101] Student nije pisao niti jedan ispit
+hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException: Student nije pisao niti jedan ispit
+	at hr.java.vjezbe.entitet.Visokoskolska.odrediProsjekOcjenaNaIspitima(Visokoskolska.java:30)
+	at hr.java.vjezbe.entitet.FakultetRacunarstva.odrediStudentaZaRektorovuNagradu(FakultetRacunarstva.java:85)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.podaciZaFakultetRacunalstva(GlavnaDatoteke.java:356)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.ispisPodatakaIzSveucilista(GlavnaDatoteke.java:316)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.main(GlavnaDatoteke.java:46)
+2022-12-01 13:33:26,514 INFO [main] h.j.v.g.Glavna [GlavnaDatoteke.java:344] Student nije pisao niti jedan ispit
+hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException: Student nije pisao niti jedan ispit
+	at hr.java.vjezbe.entitet.Visokoskolska.odrediProsjekOcjenaNaIspitima(Visokoskolska.java:30)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.podaciZaFakultetRacunalstva(GlavnaDatoteke.java:325)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.ispisPodatakaIzSveucilista(GlavnaDatoteke.java:316)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.main(GlavnaDatoteke.java:46)
+2022-12-01 13:33:26,521 INFO [main] h.j.v.g.Glavna [FakultetRacunarstva.java:101] Student nije pisao niti jedan ispit
+hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException: Student nije pisao niti jedan ispit
+	at hr.java.vjezbe.entitet.Visokoskolska.odrediProsjekOcjenaNaIspitima(Visokoskolska.java:30)
+	at hr.java.vjezbe.entitet.FakultetRacunarstva.odrediStudentaZaRektorovuNagradu(FakultetRacunarstva.java:85)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.podaciZaFakultetRacunalstva(GlavnaDatoteke.java:356)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.ispisPodatakaIzSveucilista(GlavnaDatoteke.java:316)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.main(GlavnaDatoteke.java:46)
+2022-12-01 13:33:26,522 INFO [main] h.j.v.g.Glavna [GlavnaDatoteke.java:392] Student nije pisao niti jedan ispit
+hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException: Student nije pisao niti jedan ispit
+	at hr.java.vjezbe.entitet.Visokoskolska.odrediProsjekOcjenaNaIspitima(Visokoskolska.java:30)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.podaciZaVeleucilisteJave(GlavnaDatoteke.java:371)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.ispisPodatakaIzSveucilista(GlavnaDatoteke.java:313)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.main(GlavnaDatoteke.java:46)
+2022-12-01 13:34:49,934 INFO [main] h.j.v.g.Glavna [VeleucilisteJave.java:53] Metoda OdradiNajuspjesnijegStudenta u klasi Veleucilistejave naisao na studenta koji nema ispita
+hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException: Student nije pisao niti jedan ispit
+	at hr.java.vjezbe.entitet.Visokoskolska.odrediProsjekOcjenaNaIspitima(Visokoskolska.java:30)
+	at hr.java.vjezbe.entitet.VeleucilisteJave.odrediNajuspjesnijegStudentaNaGodini(VeleucilisteJave.java:44)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.podaciZaVeleucilisteJave(GlavnaDatoteke.java:396)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.ispisPodatakaIzSveucilista(GlavnaDatoteke.java:313)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.main(GlavnaDatoteke.java:46)
+2022-12-01 13:34:52,709 INFO [main] h.j.v.g.Glavna [GlavnaDatoteke.java:344] Student nije pisao niti jedan ispit
+hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException: Student nije pisao niti jedan ispit
+	at hr.java.vjezbe.entitet.Visokoskolska.odrediProsjekOcjenaNaIspitima(Visokoskolska.java:30)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.podaciZaFakultetRacunalstva(GlavnaDatoteke.java:325)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.ispisPodatakaIzSveucilista(GlavnaDatoteke.java:316)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.main(GlavnaDatoteke.java:46)
+2022-12-01 13:34:52,716 INFO [main] h.j.v.g.Glavna [FakultetRacunarstva.java:101] Student nije pisao niti jedan ispit
+hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException: Student nije pisao niti jedan ispit
+	at hr.java.vjezbe.entitet.Visokoskolska.odrediProsjekOcjenaNaIspitima(Visokoskolska.java:30)
+	at hr.java.vjezbe.entitet.FakultetRacunarstva.odrediStudentaZaRektorovuNagradu(FakultetRacunarstva.java:85)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.podaciZaFakultetRacunalstva(GlavnaDatoteke.java:356)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.ispisPodatakaIzSveucilista(GlavnaDatoteke.java:316)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.main(GlavnaDatoteke.java:46)
+2022-12-01 13:34:52,717 INFO [main] h.j.v.g.Glavna [GlavnaDatoteke.java:392] Student nije pisao niti jedan ispit
+hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException: Student nije pisao niti jedan ispit
+	at hr.java.vjezbe.entitet.Visokoskolska.odrediProsjekOcjenaNaIspitima(Visokoskolska.java:30)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.podaciZaVeleucilisteJave(GlavnaDatoteke.java:371)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.ispisPodatakaIzSveucilista(GlavnaDatoteke.java:313)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.main(GlavnaDatoteke.java:46)
+2022-12-01 13:35:48,454 INFO [main] h.j.v.g.Glavna [VeleucilisteJave.java:53] Metoda OdradiNajuspjesnijegStudenta u klasi Veleucilistejave naisao na studenta koji nema ispita
+hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException: Student nije pisao niti jedan ispit
+	at hr.java.vjezbe.entitet.Visokoskolska.odrediProsjekOcjenaNaIspitima(Visokoskolska.java:30)
+	at hr.java.vjezbe.entitet.VeleucilisteJave.odrediNajuspjesnijegStudentaNaGodini(VeleucilisteJave.java:44)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.podaciZaVeleucilisteJave(GlavnaDatoteke.java:396)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.ispisPodatakaIzSveucilista(GlavnaDatoteke.java:313)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.main(GlavnaDatoteke.java:46)
+2022-12-01 13:37:24,226 INFO [main] h.j.v.g.Glavna [GlavnaDatoteke.java:392] Student nije pisao niti jedan ispit
+hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException: Student nije pisao niti jedan ispit
+	at hr.java.vjezbe.entitet.Visokoskolska.odrediProsjekOcjenaNaIspitima(Visokoskolska.java:30)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.podaciZaVeleucilisteJave(GlavnaDatoteke.java:371)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.ispisPodatakaIzSveucilista(GlavnaDatoteke.java:313)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.main(GlavnaDatoteke.java:46)
+2022-12-01 13:37:24,232 INFO [main] h.j.v.g.Glavna [VeleucilisteJave.java:53] Metoda OdradiNajuspjesnijegStudenta u klasi Veleucilistejave naisao na studenta koji nema ispita
+hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException: Student nije pisao niti jedan ispit
+	at hr.java.vjezbe.entitet.Visokoskolska.odrediProsjekOcjenaNaIspitima(Visokoskolska.java:30)
+	at hr.java.vjezbe.entitet.VeleucilisteJave.odrediNajuspjesnijegStudentaNaGodini(VeleucilisteJave.java:44)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.podaciZaVeleucilisteJave(GlavnaDatoteke.java:396)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.ispisPodatakaIzSveucilista(GlavnaDatoteke.java:313)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.main(GlavnaDatoteke.java:46)
+2022-12-01 13:37:24,233 INFO [main] h.j.v.g.Glavna [GlavnaDatoteke.java:344] Student nije pisao niti jedan ispit
+hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException: Student nije pisao niti jedan ispit
+	at hr.java.vjezbe.entitet.Visokoskolska.odrediProsjekOcjenaNaIspitima(Visokoskolska.java:30)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.podaciZaFakultetRacunalstva(GlavnaDatoteke.java:325)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.ispisPodatakaIzSveucilista(GlavnaDatoteke.java:316)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.main(GlavnaDatoteke.java:46)
+2022-12-01 13:37:24,235 INFO [main] h.j.v.g.Glavna [FakultetRacunarstva.java:101] Student nije pisao niti jedan ispit
+hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException: Student nije pisao niti jedan ispit
+	at hr.java.vjezbe.entitet.Visokoskolska.odrediProsjekOcjenaNaIspitima(Visokoskolska.java:30)
+	at hr.java.vjezbe.entitet.FakultetRacunarstva.odrediStudentaZaRektorovuNagradu(FakultetRacunarstva.java:85)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.podaciZaFakultetRacunalstva(GlavnaDatoteke.java:356)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.ispisPodatakaIzSveucilista(GlavnaDatoteke.java:316)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.main(GlavnaDatoteke.java:46)
+2022-12-01 13:38:36,718 INFO [main] h.j.v.g.Glavna [GlavnaDatoteke.java:344] Student nije pisao niti jedan ispit
+hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException: Student nije pisao niti jedan ispit
+	at hr.java.vjezbe.entitet.Visokoskolska.odrediProsjekOcjenaNaIspitima(Visokoskolska.java:30)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.podaciZaFakultetRacunalstva(GlavnaDatoteke.java:325)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.ispisPodatakaIzSveucilista(GlavnaDatoteke.java:316)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.main(GlavnaDatoteke.java:46)
+2022-12-01 13:38:36,725 INFO [main] h.j.v.g.Glavna [FakultetRacunarstva.java:101] Student nije pisao niti jedan ispit
+hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException: Student nije pisao niti jedan ispit
+	at hr.java.vjezbe.entitet.Visokoskolska.odrediProsjekOcjenaNaIspitima(Visokoskolska.java:30)
+	at hr.java.vjezbe.entitet.FakultetRacunarstva.odrediStudentaZaRektorovuNagradu(FakultetRacunarstva.java:85)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.podaciZaFakultetRacunalstva(GlavnaDatoteke.java:356)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.ispisPodatakaIzSveucilista(GlavnaDatoteke.java:316)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.main(GlavnaDatoteke.java:46)
+2022-12-01 13:38:36,726 INFO [main] h.j.v.g.Glavna [GlavnaDatoteke.java:392] Student nije pisao niti jedan ispit
+hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException: Student nije pisao niti jedan ispit
+	at hr.java.vjezbe.entitet.Visokoskolska.odrediProsjekOcjenaNaIspitima(Visokoskolska.java:30)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.podaciZaVeleucilisteJave(GlavnaDatoteke.java:371)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.ispisPodatakaIzSveucilista(GlavnaDatoteke.java:313)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.main(GlavnaDatoteke.java:46)
+2022-12-01 13:39:18,595 INFO [main] h.j.v.g.Glavna [VeleucilisteJave.java:53] Metoda OdradiNajuspjesnijegStudenta u klasi Veleucilistejave naisao na studenta koji nema ispita
+hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException: Student nije pisao niti jedan ispit
+	at hr.java.vjezbe.entitet.Visokoskolska.odrediProsjekOcjenaNaIspitima(Visokoskolska.java:30)
+	at hr.java.vjezbe.entitet.VeleucilisteJave.odrediNajuspjesnijegStudentaNaGodini(VeleucilisteJave.java:44)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.podaciZaVeleucilisteJave(GlavnaDatoteke.java:396)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.ispisPodatakaIzSveucilista(GlavnaDatoteke.java:313)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.main(GlavnaDatoteke.java:46)
+2022-12-01 13:39:51,339 INFO [main] h.j.v.g.Glavna [GlavnaDatoteke.java:392] Student nije pisao niti jedan ispit
+hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException: Student nije pisao niti jedan ispit
+	at hr.java.vjezbe.entitet.Visokoskolska.odrediProsjekOcjenaNaIspitima(Visokoskolska.java:30)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.podaciZaVeleucilisteJave(GlavnaDatoteke.java:371)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.ispisPodatakaIzSveucilista(GlavnaDatoteke.java:313)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.main(GlavnaDatoteke.java:46)
+2022-12-01 13:39:51,346 INFO [main] h.j.v.g.Glavna [VeleucilisteJave.java:53] Metoda OdradiNajuspjesnijegStudenta u klasi Veleucilistejave naisao na studenta koji nema ispita
+hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException: Student nije pisao niti jedan ispit
+	at hr.java.vjezbe.entitet.Visokoskolska.odrediProsjekOcjenaNaIspitima(Visokoskolska.java:30)
+	at hr.java.vjezbe.entitet.VeleucilisteJave.odrediNajuspjesnijegStudentaNaGodini(VeleucilisteJave.java:44)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.podaciZaVeleucilisteJave(GlavnaDatoteke.java:396)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.ispisPodatakaIzSveucilista(GlavnaDatoteke.java:313)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.main(GlavnaDatoteke.java:46)
+2022-12-01 13:39:51,347 INFO [main] h.j.v.g.Glavna [GlavnaDatoteke.java:344] Student nije pisao niti jedan ispit
+hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException: Student nije pisao niti jedan ispit
+	at hr.java.vjezbe.entitet.Visokoskolska.odrediProsjekOcjenaNaIspitima(Visokoskolska.java:30)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.podaciZaFakultetRacunalstva(GlavnaDatoteke.java:325)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.ispisPodatakaIzSveucilista(GlavnaDatoteke.java:316)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.main(GlavnaDatoteke.java:46)
+2022-12-01 13:39:51,349 INFO [main] h.j.v.g.Glavna [FakultetRacunarstva.java:101] Student nije pisao niti jedan ispit
+hr.java.vjezbe.iznimke.NemaIspitaZaStudentaException: Student nije pisao niti jedan ispit
+	at hr.java.vjezbe.entitet.Visokoskolska.odrediProsjekOcjenaNaIspitima(Visokoskolska.java:30)
+	at hr.java.vjezbe.entitet.FakultetRacunarstva.odrediStudentaZaRektorovuNagradu(FakultetRacunarstva.java:85)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.podaciZaFakultetRacunalstva(GlavnaDatoteke.java:356)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.ispisPodatakaIzSveucilista(GlavnaDatoteke.java:316)
+	at hr.java.vjezbe.glavna.GlavnaDatoteke.main(GlavnaDatoteke.java:46)
