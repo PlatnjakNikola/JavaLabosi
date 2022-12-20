@@ -1,0 +1,24 @@
+1
+PR412
+Programiranje u jeziku Java
+6
+1
+1, 2, 3
+2
+PR2343
+Web aplikacije u Javi
+7
+2
+1, 2
+3
+ZV412
+Zavrsni Rad
+0
+1
+1, 2
+4
+OB2343
+Obrana zavrsnog rada
+0
+2
+1, 2

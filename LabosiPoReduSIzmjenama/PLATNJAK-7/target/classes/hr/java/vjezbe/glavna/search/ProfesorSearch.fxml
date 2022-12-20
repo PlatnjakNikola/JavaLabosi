@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.vjezbe.glavna.search.ProfesorSearchController">
+    <fx:include source="../menu.fxml" />
+    <Label layoutX="200.0" layoutY="39.0" text="Pretraživanje profesora" textAlignment="CENTER">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Label>
+    <Label layoutX="252.0" layoutY="93.0" text="Sifra:" />
+    <Label layoutX="230.0" layoutY="127.0" text="Prezime:" />
+    <Label layoutX="253.0" layoutY="163.0" text="Ime:" />
+    <Label layoutX="249.0" layoutY="201.0" text="Titula:" />
+    <TextField fx:id="sifraTextField" layoutX="293.0" layoutY="89.0" />
+    <TextField fx:id="lastNameTextField" layoutX="293.0" layoutY="123.0" />
+    <TextField fx:id="nameTextField" layoutX="293.0" layoutY="159.0" />
+    <TableView fx:id="profesorTableView" layoutY="355.0" prefHeight="339.0" prefWidth="600.0">
+        <columns>
+            <TableColumn fx:id="sifraOfProfesor" prefWidth="84.0" text="Sifra" />
+            <TableColumn fx:id="LastNameOfProfesor" minWidth="0.0" prefWidth="139.0" text="Prezime" />
+            <TableColumn fx:id="nameOfProfesor" prefWidth="149.0" text="Ime" />
+            <TableColumn fx:id="titulaOfProfesor" prefWidth="228.0" text="Titula" />
+        </columns>
+    </TableView>
+    <Button layoutX="375.0" layoutY="233.0" mnemonicParsing="false" onAction="#onSearchButtonClick" text="Search">
+        <font>
+            <Font name="System Bold" size="15.0" />
+        </font>
+    </Button>
+   <TextField fx:id="titulaTextField" layoutX="293.0" layoutY="197.0" />
+</AnchorPane>

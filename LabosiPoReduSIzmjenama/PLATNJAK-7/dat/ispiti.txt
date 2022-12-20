@@ -1,0 +1,56 @@
+1
+1
+1
+5
+01.07.2022.T12:30
+Velika dvorana
+Velika Zgrada
+2
+2
+1
+5
+01.07.2022.T12:35
+Velika dvorana
+Velika Zgrada
+3
+1
+2
+4
+01.07.2022.T12:30
+Velika dvorana
+Velika Zgrada
+4
+2
+2
+4
+01.07.2022.T12:35
+Velika dvorana
+Velika Zgrada
+5
+3
+1
+4
+01.07.2022.T14:35
+Velika dvorana
+Velika Zgrada
+6
+4
+1
+4
+01.07.2022.T15:35
+Velika dvorana
+Velika Zgrada
+7
+3
+2
+5
+01.07.2022.T14:35
+Velika dvorana
+Velika Zgrada
+8
+4
+2
+5
+01.07.2022.T15:35
+Velika dvorana
+Velika Zgrada
