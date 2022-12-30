@@ -8,7 +8,7 @@ public enum Ocjena {
     ODLICAN(5);
     private int ocjena;
 
-    private Ocjena(int ocjena){
+    Ocjena(int ocjena){
         this.ocjena = ocjena;
     }
 

@@ -10,7 +10,7 @@ import static hr.java.vjezbe.Global.Globals.BROJUCILISTA;
 import static hr.java.vjezbe.glavna.Glavna.unos;
 
 public class Sveuciliste <T extends ObrazovnaUstanova>{
-    private List<T> listaUstanova;
+    private final List<T> listaUstanova;
 
     public Sveuciliste() {
         this(BROJUCILISTA);
